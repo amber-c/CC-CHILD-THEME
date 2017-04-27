@@ -56,8 +56,7 @@ $options = Admin::fetch_options( $teccc );
 #tribe-events-content .tribe-events-category-<?php echo $slug ?> > .tribe-events-tooltip h4,
 .tribe-events-category-<?php echo $slug ?> > div.hentry.vevent > h3.entry-title,
 .tribe-events-category-<?php echo $slug ?> h2 a,
-.tribe-events-mobile.tribe-events-category-<?php echo $slug ?> h4,
-.events-archive #tribe-events-content .tribe-events-loop .type-tribe_events.tribe-events-category-<?php echo $slug ?>
+.tribe-events-mobile.tribe-events-category-<?php echo $slug ?> h4
 {
 	background-color: <?php esc_attr_e( $options[ $slug.'-background' ] ) ?>;
 	border-left: 6px solid <?php esc_attr_e( $options[ $slug.'-border' ] ) ?>;
@@ -66,6 +65,12 @@ $options = Admin::fetch_options( $teccc );
 	line-height: 1.4em;
 	padding-left: 5px;
 	padding-bottom: 2px;
+}
+
+.events-archive #tribe-events-content .tribe-events-loop .type-tribe_events.tribe-events-category-<?php echo $slug ?>
+{
+	background: transparent;
+	border: 1px solid <?php esc_attr_e( $options[ $slug.'-border' ] ) ?>;
 }
 
 <?php Extras::add_map_display_css( $slug ); ?>
