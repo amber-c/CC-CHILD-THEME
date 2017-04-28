@@ -69,7 +69,6 @@ $options = Admin::fetch_options( $teccc );
 
 .events-archive #tribe-events-content .tribe-events-loop .type-tribe_events.tribe-events-category-<?php echo $slug ?>
 {
-	background: transparent;
 	border: 1px solid <?php esc_attr_e( $options[ $slug.'-border' ] ) ?>;
 }
 
